@@ -12,13 +12,17 @@ import Section from '../Layout/Section';
 const Portfolio: FC = memo(() => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
-      <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
-        <div className=" w-full columns-2 md:columns-3 lg:columns-4">
+      <div className="flex flex-col gap-y-3">
+
+        <h2 className="self-center text-xl font-bold text-white">Have a look at some of my projects</h2>
+
+          {/*<div className=" w-full columns-1 md:columns-1 lg:columns-3">*/}
+          <div className="-m-1 flex flex-wrap md:-m-2">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;
             return (
-              <div className="pb-6" key={`${title}-${index}`}>
+              // <div className="pb-6" key={`${title}-${index}`}>
+               <div className="flex w-1/3 flex-wrap" key={`${title}-${index}`}>
                 <div
                   className={classNames(
                     'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
